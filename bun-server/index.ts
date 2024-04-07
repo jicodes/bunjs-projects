@@ -116,14 +116,11 @@ serve({
     }
 
     // delete a post by ID
-    if (method === "DELETE") {
-      const match = pathname.match(pathRegex);
-      const postId = match && match[1];
-      if (postId) {
-        return handleDeletePostById(postId);
-      }
-    }
+    if (method === "DELETE" && pathname === "/api/posts") {
+      const { id } = await req.json();
 
+      return handleDeletePostById(id);
+    }
     return new Response(`Page Not Found`, { status: 404 });
   },
 });
