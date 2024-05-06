@@ -30,3 +30,6 @@ bun run dev
 ```
 
 Acknowledgement: [video here](https://youtu.be/arVNHfFCJfU).
+
+## TODO:
+initial todos can be retrieved from ssr 
