@@ -1,13 +1,13 @@
 import { Hono } from "hono";
 
 export type Env = {
-    MY_VAR: string;
+    DB: D1Database;
 };
 
 const app = new Hono<{ Bindings: Env }>();
 
 app.get("/", (c) => {
-    return c.text("Hello Hono!");
+    return c.text(`Hello Hono!`);
 });
 
 export default app;
