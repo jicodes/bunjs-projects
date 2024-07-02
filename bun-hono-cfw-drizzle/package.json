@@ -4,7 +4,7 @@
         "dev": "wrangler dev src/index.ts",
         "deploy": "wrangler deploy --minify src/index.ts",
         "db:generate": "drizzle-kit generate",
-        "db:up": "drizzle-kit up:sqlite"
+        "db:up": "drizzle-kit up"
     },
     "dependencies": {
         "@libsql/client": "^0.7.0",
